@@ -5,5 +5,6 @@
 /// <reference path="./core/documents.d.ts" />
 /// <reference path="./core/globals.d.ts" />
 /// <reference path="./core/helpers.d.ts" />
+/// <reference path="./core/packages.d.ts" />
 /// <reference path="./core/types.d.ts" />
 /// <reference path="./core/utils.d.ts" />

@@ -1,7 +1,3 @@
-interface Module {
-  api: Record<string, Function>
-}
-
 declare const Hooks: {
   on: (name: string, callback: Function) => number
   once: (name: string, callback: Function) => number
@@ -13,7 +9,7 @@ declare const game: {
     localize: (key: string, data?: object) => string
   }
   actors: foundry.utils.Collection<string, foundry.documents.Actor>
-  modules: foundry.utils.Collection<string, Module>
+  modules: foundry.utils.Collection<string, foundry.packages.Module>
   packs: foundry.utils.Collection<string, any>
   paused: boolean
   scenes: foundry.utils.Collection<string, foundry.documents.Scene>
