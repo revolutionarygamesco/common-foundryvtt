@@ -1,5 +1,9 @@
 # Node modules
 node_modules
 
+# Ignore built files
+dist
+coverage
+
 # Ignore IDE configuration
 .idea
