@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "tsdown": "^0.22.5"
+    "tsdown": "^0.22.5",
+    "typescript": "^7.0.2"
   }
 }
