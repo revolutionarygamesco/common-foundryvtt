@@ -1,0 +1,18 @@
+declare namespace foundry {
+  namespace audio {
+    class AudioHelper {
+      static play(src: string, options?: object): Promise<Sound>
+    }
+
+    class Sound {
+      src: string
+
+      get playing(): boolean
+      get volume(): number
+
+      pause(): void
+      play(options?: object): Promise<Sound>
+      stop(options?: object): Promise<Sound>
+    }
+  }
+}
