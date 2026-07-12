@@ -20,11 +20,17 @@
     "url": "https://patreon.com/revolutionarygamesco"
   },
   "type": "module",
-  "files": ["dist", "src", "!src/**/*.test.ts", "!src/**/*.test-d.ts"],
+  "files": [
+    "dist",
+    "src",
+    "!src/**/*.test.ts",
+    "!src/**/*.test-d.ts"
+  ],
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
     "publint": "^0.3.21",
     "tsdown": "^0.22.5",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
   }
 }
