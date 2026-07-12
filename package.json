@@ -26,6 +26,21 @@
     "!src/**/*.test.ts",
     "!src/**/*.test-d.ts"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./systems/*": {
+      "types": "./dist/systems/*.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsdown"
+  },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
     "@vitest/coverage-v8": "^4.1.10",
