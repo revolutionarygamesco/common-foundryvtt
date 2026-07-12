@@ -1,0 +1,12 @@
+import './types/core/abstract.d.ts'
+import './types/core/applications.d.ts'
+import './types/core/audio.d.ts'
+import './types/core/dice.d.ts'
+import './types/core/documents.d.ts'
+import './types/core/globals.d.ts'
+import './types/core/helpers.d.ts'
+import './types/core/packages.d.ts'
+import './types/core/types.d.ts'
+import './types/core/utils.d.ts'
+
+export * from './mocks/roll.ts'
