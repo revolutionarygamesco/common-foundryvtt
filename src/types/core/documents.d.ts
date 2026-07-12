@@ -52,7 +52,6 @@ declare namespace foundry {
       drawings: utils.Collection<string, Drawing>
       regions: utils.Collection<string, RegionDocument>
       tokens: utils.Collection<string, TokenDocument>
-      updateEmbeddedDocuments: (type: string, docs: Array<Record<string, any>>) => Promise<void>
       activate(): Promise<Scene>
       view(): Promise<Scene>
     }
