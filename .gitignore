@@ -4,6 +4,7 @@ node_modules
 # Ignore built files
 dist
 coverage
+tsconfig.system.tmp.json
 
 # Ignore local configuration
 .idea

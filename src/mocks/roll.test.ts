@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { mockRoll } from './roll.ts'
+import { mockRoll } from './roll.js'
 
 describe('mockRoll', () => {
   it('defaults to a total of 1', () => {
