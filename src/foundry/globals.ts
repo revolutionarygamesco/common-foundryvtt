@@ -26,4 +26,18 @@ declare global {
     userId: string
     users: foundry.documents.Users
   }
+
+  const ui: {
+    notifications: {
+      clear: () => void
+      has: (notification: number | foundry.ui.Notification) => boolean
+      notify: (message: string | object, type?: string, options?: foundry.ui.NotificationOptions) => foundry.ui.Notification
+      remove: (notification: number | foundry.ui.Notification) => void
+      update: (notification: number | foundry.ui.Notification, update?: foundry.ui.NotificationUpdate) => void
+      error: (message: string | object, options?: foundry.ui.NotificationOptions) => Readonly<foundry.ui.Notification>
+      info: (message: string | object, options?: foundry.ui.NotificationOptions) => Readonly<foundry.ui.Notification>
+      success: (message: string | object, options?: foundry.ui.NotificationOptions) => Readonly<foundry.ui.Notification>
+      warn: (message: string | object, options?: foundry.ui.NotificationOptions) => Readonly<foundry.ui.Notification>
+    }
+  }
 }
