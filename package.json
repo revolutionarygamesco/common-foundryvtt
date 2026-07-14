@@ -20,7 +20,9 @@
     "url": "https://patreon.com/revolutionarygamesco"
   },
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
@@ -65,5 +67,8 @@
     "tsdown": "^0.22.5",
     "typescript": "^7.0.2",
     "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "@revolutionarygamesco/common": "^1.0.0"
   }
 }
