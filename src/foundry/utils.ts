@@ -20,6 +20,7 @@ declare global {
       function deepClone<T extends object>(orig: T, options?: object): T
       function expandObject<T = Record<string, unknown>>(obj: object): T
       function escapeHTML(content: string): string
+      function fromUuid(uuid: string, options?: { invalid?: boolean, relative?: foundry.abstract.Document }): Promise<foundry.abstract.Document | null>
     }
   }
 }
