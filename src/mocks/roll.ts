@@ -1,4 +1,4 @@
-import { vi } from 'vitest'
+import { stubGlobalPath } from './stub.ts'
 
 export const mockRoll = (total: number = 1): void => {
   const Roll = function (this: foundry.dice.Roll) {
@@ -7,6 +7,5 @@ export const mockRoll = (total: number = 1): void => {
     this.evaluateSync = () => this
   } as unknown as typeof foundry.dice.Roll
 
-  const foundryGlobal = (globalThis as { foundry?: object }).foundry ?? {}
-  vi.stubGlobal('foundry', { ...foundryGlobal, dice: { Roll } })
+  stubGlobalPath('foundry.dice.Roll', Roll)
 }

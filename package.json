@@ -30,6 +30,10 @@
       "types": "./dist/mocks/index.d.mts",
       "default": "./dist/mocks/index.mjs"
     },
+    "./mocks/setup": {
+      "types": "./dist/mocks/setup.d.mts",
+      "default": "./dist/mocks/setup.mjs"
+    },
     "./systems/*": {
       "types": "./dist/foundry/systems/*.d.mts",
       "default": "./dist/foundry/systems/*.mjs"
@@ -37,7 +41,8 @@
     "./package.json": "./package.json"
   },
   "sideEffects": [
-    "./dist/foundry/systems/*.mjs"
+    "./dist/foundry/systems/*.mjs",
+    "./dist/mocks/setup.mjs"
   ],
   "peerDependencies": {
     "vitest": "^4.1.10"
