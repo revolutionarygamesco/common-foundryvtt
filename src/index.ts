@@ -1,3 +1,3 @@
 import './foundry/index.js'
 
-export * from './mocks/roll.js'
+export * from './wrappers/roll.ts'

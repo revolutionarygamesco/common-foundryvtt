@@ -26,6 +26,10 @@
       "types": "./dist/index.d.mts",
       "default": "./dist/index.mjs"
     },
+    "./mocks": {
+      "types": "./dist/mocks/index.d.mts",
+      "default": "./dist/mocks/index.mjs"
+    },
     "./systems/*": {
       "types": "./dist/foundry/systems/*.d.mts",
       "default": "./dist/foundry/systems/*.mjs"
@@ -35,6 +39,14 @@
   "sideEffects": [
     "./dist/foundry/systems/*.mjs"
   ],
+  "peerDependencies": {
+    "vitest": "^4.1.10"
+  },
+  "peerDependenciesMeta": {
+    "vitest": {
+      "optional": true
+    }
+  },
   "scripts": {
     "test": "vitest run && npm run test:types",
     "test:types": "tsc --noEmit && node scripts/typecheck-systems.mjs",
