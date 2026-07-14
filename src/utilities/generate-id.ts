@@ -1,0 +1,12 @@
+import { selectRandomElement } from '@revolutionarygamesco/common'
+
+const numbers = '0123456789'
+const lower = 'abcdefghijklmnopqrstuvwxyz'
+const upper = lower.toUpperCase()
+const chars = (upper + lower + numbers).split('')
+
+export const generateID = (): string => {
+  let id = ''
+  while (id.length < 16) id += selectRandomElement(chars)
+  return id
+}
