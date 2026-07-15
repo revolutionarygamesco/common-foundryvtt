@@ -17,6 +17,12 @@ describe('drawDescription', () => {
     expect(actual).toBe(description)
   })
 
+  it('returns null if it gets no results', async () => {
+    mockTable({ uuid: 'table', roll, results: [] })
+    const actual = await drawDescription('table')
+    expect(actual).toBeNull()
+  })
+
   it('returns null if table does not exist', async () => {
     mockTable({ uuid: 'table', roll, results: [{ name, description } as foundry.documents.TableResult] })
     const actual = await drawDescription('nope')
