@@ -9,6 +9,7 @@
     "declarationMap": true,
     "allowImportingTsExtensions": true,
     "isolatedDeclarations": true,
+    "noUncheckedIndexedAccess": true,
     "verbatimModuleSyntax": true,
     "skipLibCheck": false,
     "noEmit": true

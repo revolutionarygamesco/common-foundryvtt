@@ -10,10 +10,10 @@ const isDict = (value: unknown): value is Dict => typeof value === 'object' && v
  */
 export const stubGlobalPath = (path: string, value: unknown): void => {
   const [root, ...rest] = path.split('.')
-  const existing = (globalThis as Dict)[root]
+  const existing = (globalThis as Dict)[root ?? '/']
 
   if (rest.length === 0) {
-    vi.stubGlobal(root, value)
+    vi.stubGlobal(root ?? '/', value)
     return
   }
 
@@ -27,6 +27,6 @@ export const stubGlobalPath = (path: string, value: unknown): void => {
     node = next
   }
 
-  node[rest[rest.length - 1]] = value
-  vi.stubGlobal(root, base)
+  node[rest[rest.length - 1]!] = value
+  vi.stubGlobal(root ?? '/', base)
 }
