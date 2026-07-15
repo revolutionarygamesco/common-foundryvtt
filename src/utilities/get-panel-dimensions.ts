@@ -8,7 +8,7 @@ export interface PanelDimensions {
 export const getPanelDimensions = (
   width: number,
   height: number,
-  viewport: { innerWidth: number, innerHeight: number }
+  viewport: { innerWidth: number, innerHeight: number } = window
 ): PanelDimensions => {
   const { innerWidth, innerHeight } = viewport
   const w = width > 1 ? width : Math.floor(innerWidth * width)

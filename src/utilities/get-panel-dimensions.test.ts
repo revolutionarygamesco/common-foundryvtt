@@ -9,11 +9,16 @@ describe('getPanelDimensions', () => {
   const viewport = { innerWidth: 1920, innerHeight: 1080 }
 
   it('sets static dimensions', () => {
-    expect(getPanelDimensions(800, 500, viewport)).toMatchObject({ width: 800, height: 500 })
+    const { width, height, left, top } = getPanelDimensions(800, 500, viewport)
+    expect(width).toBe(800)
+    expect(height).toBe(500)
+    expect(top).toBe(Math.ceil((1080 - 500) / 2))
+    expect(left).toBe(Math.ceil((1920 - 800) / 2))
   })
 
   it('applies fractional dimensions', () => {
-    expect(getPanelDimensions(1000, 2 / 3, viewport).height).toBe(1080 * (2/ 3))
+    const { height } = getPanelDimensions(1000, 2 / 3, viewport)
+    expect(height).toBe(1080 * (2/ 3))
   })
 
   it('rounds to the nearest pixel', () => {
