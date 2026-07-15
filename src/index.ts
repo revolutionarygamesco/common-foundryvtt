@@ -5,3 +5,4 @@ export * from './utilities/get-id.ts'
 export * from './utilities/make-link.ts'
 
 export * from './wrappers/roll.ts'
+export * from './wrappers/roll-table.ts'
