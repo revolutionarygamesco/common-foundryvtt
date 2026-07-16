@@ -3,6 +3,15 @@ export {}
 declare global {
   namespace foundry {
     namespace types {
+      interface ApplicationPosition {
+        height: number | 'auto'
+        left: number
+        scale: number
+        top: number
+        width: number | 'auto'
+        zIndex: number
+      }
+
       interface ElevatedPoint {
         x: number
         y: number
