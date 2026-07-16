@@ -19,6 +19,7 @@ declare global {
 
       function deepClone<T extends object>(orig: T, options?: object): T
       function escapeHTML(content: string): string
+      function unescapeHTML(content: string): string
       function fromUuid(uuid: string, options?: { invalid?: boolean, relative?: foundry.abstract.Document }): Promise<foundry.abstract.Document | null>
     }
   }
