@@ -1,7 +1,7 @@
 {
   "name": "@revolutionarygamesco/common-foundryvtt",
   "description": "A library of methods and types that we tend to use in all (or at least most) of our Foundry VTT modules.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/revolutionarygamesco/common-foundryvtt",
   "bugs": "https://github.com/revolutionarygamesco/common-foundryvtt/issues",
   "repository": {
@@ -46,6 +46,9 @@
     "./dist/foundry/systems/*.mjs",
     "./dist/mocks/setup.mjs"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "vitest": "^4.1.10"
   },
