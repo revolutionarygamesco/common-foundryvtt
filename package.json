@@ -62,7 +62,8 @@
     "test:types": "tsc --noEmit && node scripts/typecheck-systems.mjs",
     "test:coverage": "vitest run --coverage",
     "build": "tsdown",
-    "prepack": "npm_config_dry_run=false npm run build"
+    "prepack": "npm_config_dry_run=false npm run build",
+    "prepublishOnly": "npm run test"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
