@@ -58,7 +58,8 @@
     "test": "vitest run && npm run test:types",
     "test:types": "tsc --noEmit && node scripts/typecheck-systems.mjs",
     "test:coverage": "vitest run --coverage",
-    "build": "tsdown"
+    "build": "tsdown",
+    "prepack": "npm_config_dry_run=false npm run build"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
