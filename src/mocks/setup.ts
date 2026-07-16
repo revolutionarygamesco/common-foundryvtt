@@ -11,6 +11,7 @@ globals.game = game
 const foundry = (globals.foundry ?? {}) as Dict
 const utils = (foundry.utils ?? {}) as Dict
 
+utils.deepClone = <T extends object>(original: T): T => structuredClone(original)
 utils.fromUuid = async (uuid: string): Promise<foundry.abstract.Document | null> => null
 foundry.utils = utils
 globals.foundry = foundry
