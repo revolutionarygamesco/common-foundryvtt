@@ -23,7 +23,7 @@ export const getOffset = (
 
 export const generateApplicationPosition = (
   options: ApplicationPositionOptions,
-): foundry.types.ApplicationPosition => {
+): Partial<foundry.types.ApplicationPosition> => {
   const viewport = options?.viewport ?? window
   const { innerWidth, innerHeight } = viewport
 
@@ -33,5 +33,5 @@ export const generateApplicationPosition = (
   const left = options?.left ?? getOffset(width, innerWidth)
   const top = options?.top ?? getOffset(height, innerHeight)
 
-  return { width, height, left, top, scale: 1, zIndex: 101 }
+  return { width, height, left, top }
 }
