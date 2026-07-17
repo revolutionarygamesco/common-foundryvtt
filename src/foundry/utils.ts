@@ -17,7 +17,7 @@ declare global {
         contents: V[]
       }
 
-      function deepClone<T extends object>(orig: T, options?: object): T
+      function deepClone<T extends object>(orig: T, options?: { prune?: boolean; strict?: boolean }): T
       function escapeHTML(content: string): string
       function unescapeHTML(content: string): string
       function fromUuid(uuid: string, options?: { invalid?: boolean, relative?: foundry.abstract.Document }): Promise<foundry.abstract.Document | null>
