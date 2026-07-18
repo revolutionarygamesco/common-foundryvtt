@@ -54,4 +54,4 @@ import '@revolutionarygamesco/common-foundryvtt'
 * [mockFromUuid](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockFromUuid)
 * [mockLocalize](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockLocalize)
 * [mockRoll](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockRoll)
-* [mockTable](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockTable)
+* [mockTables](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockTables)

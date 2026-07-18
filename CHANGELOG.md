@@ -1,4 +1,7 @@
 ### v0.1.0
+* Updated `mockTables` to handle multiple tables.
+
+### v0.1.0
 * Types
   * `global`
     * `Hooks`
