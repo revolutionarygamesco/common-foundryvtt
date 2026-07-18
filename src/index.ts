@@ -6,6 +6,7 @@ export { generateID } from './utilities/generate-id.ts'
 export { getID } from './utilities/get-id.ts'
 export { makeLink, type Linkable } from './utilities/make-link.ts'
 
+export { check } from './wrappers/check.ts'
 export { drawDescription } from './wrappers/draw-description.ts'
 export { drawName } from './wrappers/draw-name.ts'
 export { roll } from './wrappers/roll.ts'
