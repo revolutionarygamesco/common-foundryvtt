@@ -40,8 +40,6 @@ declare global {
 
       interface Named { name: string }
       interface Imaged { img: string }
-      interface Typed { type: string }
-
       interface Subtyped<S> {
         type: string
         system: S
