@@ -1,3 +1,7 @@
+### v0.3.1
+* Wrappers
+  * [drawStr](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/drawStr)
+
 ### v0.3.0
 * Types
   * `global`

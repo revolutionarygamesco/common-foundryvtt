@@ -62,6 +62,7 @@ export default defineConfig({
 * [drawDescription](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/drawDescription)
 * [drawGuarded](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/drawGuarded)
 * [drawName](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/drawName)
+* [drawStr](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/drawStr)
 * [registerAPI](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/registerAPI)
 * [roll](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/roll)
 * [rollTable](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/rollTable)

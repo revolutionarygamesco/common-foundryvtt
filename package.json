@@ -1,7 +1,7 @@
 {
   "name": "@revolutionarygamesco/common-foundryvtt",
   "description": "A library of methods and types that we tend to use in all (or at least most) of our Foundry VTT modules.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/revolutionarygamesco/common-foundryvtt",
   "bugs": "https://github.com/revolutionarygamesco/common-foundryvtt/issues",
   "repository": {
