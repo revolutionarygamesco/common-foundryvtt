@@ -1,3 +1,6 @@
+### v0.3.2
+* Fix bug exporting `drawStr`
+
 ### v0.3.1
 * Wrappers
   * [drawStr](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/drawStr)
