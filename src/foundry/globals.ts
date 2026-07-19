@@ -24,6 +24,7 @@ declare global {
     tables: foundry.utils.Collection<string, foundry.documents.RollTable>
     time: foundry.helpers.GameTime
     userId: string
+    user: foundry.documents.User
     users: foundry.documents.Users
   }
 

@@ -76,7 +76,7 @@ declare global {
         name?: string
       }
 
-      interface User {
+      interface User extends abstract.Named {
         id: string
       }
 
