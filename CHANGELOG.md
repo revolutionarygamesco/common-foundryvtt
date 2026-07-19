@@ -1,3 +1,18 @@
+### v0.3.0
+* Types
+  * `global`
+    * `game.user`
+* Wrappers
+  * [check](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/check)
+  * [drawGuarded](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/drawGuarded)
+  * [registerAPI](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/registerAPI)
+  * [scopeLocalizer](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/scopeLocalizer)
+  * [whisper](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/whisper)
+* Mocks
+  * Reusable, configurable mocks
+    * [mockChatMessage](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockChatMessage)
+    * [mockUser](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockUser)
+
 ### v0.2.0
 * Updated `mockTables` to handle multiple tables.
 
