@@ -52,6 +52,20 @@ declare global {
         }
       }
 
+      namespace fields {
+        function createCheckboxInput(config?: object): HTMLInputElement
+        function createEditorInput(config?: object): HTMLDivElement
+        function createFontAwesomeIcon(glyph: string, options?: object): HTMLElement
+        function createFormGroup(config?: object): HTMLDivElement
+        function createMultiSelectInput(config?: object): Element
+        function createNumberInput(config?: object): HTMLInputElement
+        function createSelectInput(config?: object): HTMLSelectElement
+        function createTextareaInput(config?: object): HTMLTextAreaElement
+        function createTextInput(config?: object): HTMLInputElement
+        function prepareSelectOptionGroups(config?: object): { group: string; options: object[] }[]
+        function setInputAttributes(input: HTMLElement, config?: object): void
+      }
+
       namespace handlebars {
         function loadTemplates(paths: string[] | Record<string, string>): Promise<unknown[]>
         function renderTemplate(path: string, data: object): Promise<string>
