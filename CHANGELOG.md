@@ -1,3 +1,6 @@
+### v0.3.3
+* Add types for `foundry.applications.fields`
+
 ### v0.3.2
 * Fix bug exporting `drawStr`
 
