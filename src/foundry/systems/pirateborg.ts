@@ -20,7 +20,7 @@ export namespace PirateBorgSystem {
   }
 
   export interface CreatureWeapon {
-    formula: Die
+    formula: string
     description?: string
   }
 
