@@ -1,8 +1,12 @@
+### v0.3.4
+* Added types for `foundry.documents.Folder`
+* Improved typing for _Pirate Borg_ system.
+
 ### v0.3.3
-* Add types for `foundry.applications.fields`
+* Added types for `foundry.applications.fields`
 
 ### v0.3.2
-* Fix bug exporting `drawStr`
+* Fixed bug exporting `drawStr`
 
 ### v0.3.1
 * Wrappers
