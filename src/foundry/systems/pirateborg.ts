@@ -1,5 +1,5 @@
 export namespace PirateBorgSystem {
-  export type Die = 'd2' | 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20'
+  export type Die = '0' | 'd2' | 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20'
 
   export interface Stat {
     value: number
