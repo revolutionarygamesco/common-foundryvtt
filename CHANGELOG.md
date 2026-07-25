@@ -1,3 +1,10 @@
+### v0.3.5
+* Move `game`, `ui`, and `Hooks` to interfaces, so they can be expanded upon.
+* Fixes for _Pirate Borg_ system
+  * Die can go all the way down to 0
+  * Change `formula` from `Die` to `string`. `Die` works great for a single
+    die, but it breaks as soon as you throw in something like `2d6`.
+
 ### v0.3.4
 * Added types for `foundry.documents.Folder`
 * Improved typing for _Pirate Borg_ system.
