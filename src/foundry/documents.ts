@@ -25,7 +25,15 @@ declare global {
       }
 
       interface Drawing extends abstract.Document {
-        text?: string
+        text?: 'ActiveEffect' | 'Actor' | 'Adventure' | 'Item' | 'Scene' | 'JournalEntry' | 'Playlist' | 'RollTable' | 'Cards' | 'Macro' | 'Compendium'
+        name: string
+      }
+
+      class Folder {
+        type: string
+        name: string
+        get folder (): Folder | null
+        static create(data?: any, operation?: any): Promise<Folder | undefined>
       }
 
       interface Item extends abstract.Document, abstract.Named, abstract.Imaged, abstract.Subtyped<ItemSystem> {}
