@@ -75,5 +75,8 @@
   },
   "dependencies": {
     "@revolutionarygamesco/common": "^1.2.6"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }
