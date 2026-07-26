@@ -54,6 +54,7 @@ export default defineConfig({
 * [getDroppedDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getDroppedDocument)
 * [generateID](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/generateID)
 * [getID](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getID)
+* [getPronouns](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getPronouns)
 * [makeLink](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/makeLink)
 
 ### Wrappers

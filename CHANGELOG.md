@@ -1,3 +1,7 @@
+### v0.3.6
+* Wrappers
+  * [getPronouns](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getPronouns)
+
 ### v0.3.5
 * Move `game`, `ui`, and `Hooks` to interfaces, so they can be expanded upon.
 * Fixes for _Pirate Borg_ system
