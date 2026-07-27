@@ -3,6 +3,8 @@ export {}
 declare global {
   namespace foundry {
     namespace types {
+      type FolderTypes = 'ActiveEffect' | 'Actor' | 'Adventure' | 'Item' | 'Scene' | 'JournalEntry' | 'Playlist' | 'RollTable' | 'Cards' | 'Macro' | 'Compendium'
+
       interface ApplicationPosition {
         height: number | 'auto'
         left: number

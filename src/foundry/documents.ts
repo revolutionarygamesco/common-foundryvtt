@@ -25,12 +25,12 @@ declare global {
       }
 
       interface Drawing extends abstract.Document {
-        text?: 'ActiveEffect' | 'Actor' | 'Adventure' | 'Item' | 'Scene' | 'JournalEntry' | 'Playlist' | 'RollTable' | 'Cards' | 'Macro' | 'Compendium'
+        text?: string
         name: string
       }
 
       class Folder {
-        type: string
+        type: foundry.types.FolderTypes
         name: string
         children: foundry.types.FolderChildNode[]
         get folder (): Folder | null
