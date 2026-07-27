@@ -9,6 +9,7 @@ declare global {
       interface TableResultSystem {}
 
       interface Actor extends abstract.Document, abstract.Named, abstract.Imaged, abstract.Subtyped<ActorSystem> {
+        folder: Folder
         items: utils.Collection<string, Item>
         getTokenDocument(data?: object, options?: object): Promise<TokenDocument>
       }
@@ -37,12 +38,16 @@ declare global {
         static create(data?: any, operation?: any): Promise<Folder | undefined>
       }
 
-      interface Item extends abstract.Document, abstract.Named, abstract.Imaged, abstract.Subtyped<ItemSystem> {}
+      interface Item extends abstract.Document, abstract.Named, abstract.Imaged, abstract.Subtyped<ItemSystem> {
+        folder: Folder
+      }
+
       class Item {
         static create(data?: any, operation?: abstract.CreateOperation): Promise<Item | undefined>
       }
 
       interface JournalEntry extends abstract.Document, abstract.Named {
+        folder: Folder
         pages: utils.Collection<string, JournalEntryPage>
       }
 
@@ -62,6 +67,7 @@ declare global {
       interface Scene extends abstract.Document, abstract.Named {
         active: boolean
         drawings: utils.Collection<string, Drawing>
+        folder: Folder
         regions: utils.Collection<string, RegionDocument>
         tokens: utils.Collection<string, TokenDocument>
         activate(): Promise<Scene>
@@ -75,6 +81,7 @@ declare global {
       }
 
       interface RollTable extends abstract.Document, abstract.Named, abstract.Imaged {
+        folder: Folder
         draw(options?: object): Promise<any>
       }
 
