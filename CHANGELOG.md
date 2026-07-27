@@ -1,3 +1,6 @@
+### v0.3.10
+* Add folder to `Actor`, `Item`, `JournalEntry`, `Scene`, and `RollTable`.
+
 ### v0.3.9
 * Fix types for `Drawing.text` and `Folder.type`
 * Methods
