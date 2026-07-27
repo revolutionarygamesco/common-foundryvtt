@@ -50,6 +50,7 @@ export default defineConfig({
 
 ### Methods
 
+* [findFolder](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/findFolder)
 * [generateApplicationPosition](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/generateApplicationPosition)
 * [getDroppedDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getDroppedDocument)
 * [generateID](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/generateID)
@@ -74,6 +75,7 @@ export default defineConfig({
 
 * [mockChatMessage](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockChatMessage)
 * [mockDragData](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockDragData)
+* [mockFolders](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockFolders)
 * [mockFromUuid](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockFromUuid)
 * [mockLocalize](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockLocalize)
 * [mockRoll](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockRoll)

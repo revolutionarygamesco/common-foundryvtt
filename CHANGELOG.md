@@ -1,3 +1,10 @@
+### v0.3.9
+* Fix types for `Drawing.text` and `Folder.type`
+* Methods
+  * [findFolder](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/findFolder)
+* Mocks
+  * [mockFolders](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockFolders)
+
 ### v0.3.8
 * Add types for `Document.create`.
 
