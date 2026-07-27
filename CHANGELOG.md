@@ -1,3 +1,6 @@
+### v0.3.8
+* Add types for `Document.create`.
+
 ### v0.3.7
 * Add types for child folders.
 
