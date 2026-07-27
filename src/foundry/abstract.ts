@@ -14,6 +14,7 @@ declare global {
         readonly flags: any
 
         toObject(source?: boolean): any
+        create(data?: any, operation?: any): Promise<this | undefined>
         update(data?: any, operation?: any): Promise<this | undefined>
         delete(operation?: any): Promise<this | undefined>
 
