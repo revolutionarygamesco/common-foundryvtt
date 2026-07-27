@@ -1,3 +1,6 @@
+### v0.3.7
+* Add types for child folders.
+
 ### v0.3.6
 * Wrappers
   * [getPronouns](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getPronouns)
