@@ -32,6 +32,7 @@ declare global {
       class Folder {
         type: string
         name: string
+        children: foundry.types.FolderChildNode[]
         get folder (): Folder | null
         static create(data?: any, operation?: any): Promise<Folder | undefined>
       }

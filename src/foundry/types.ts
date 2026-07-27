@@ -18,6 +18,15 @@ declare global {
         elevation: number
       }
 
+      interface FolderChildNode {
+        children: FolderChildNode[]
+        depth: number
+        entries: Array<foundry.abstract.Document>
+        folder: foundry.documents.Folder
+        root: boolean
+        visible: boolean
+      }
+
       interface TimeComponents {
         day: number
         dayOfMonth: number
