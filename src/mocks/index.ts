@@ -1,6 +1,7 @@
 export * from './from-uuid.ts'
 export * from './chat.ts'
 export * from './drag-data.ts'
+export * from './folders.ts'
 export * from './i18n.ts'
 export * from './roll.ts'
 export * from './tables.ts'
