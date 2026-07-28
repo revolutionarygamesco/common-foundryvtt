@@ -1,3 +1,6 @@
+### v0.3.12
+* Added `Actor.prototypeToken`
+
 ### v0.3.11
 * Mocks
   * [mockModules](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockModules)
