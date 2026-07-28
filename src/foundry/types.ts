@@ -41,6 +41,59 @@ declare global {
         second: number
         year: number
       }
+
+      interface TokenBarData {
+        attribute?: string;
+      }
+
+      interface TokenData {
+        _id: string | null
+        _movementHistory: object[]
+        _regions: string[]
+        actorId: string | null
+        actorLink?: boolean
+        alpha?: number
+        bar1?: TokenBarData
+        bar2?: TokenBarData
+        delta?: object
+        depth?: number
+        detectionModes: object
+        displayBars?: number
+        displayName?: number
+        disposition?: number
+        elevation?: number
+        flags: Record<string, Record<string, unknown>>
+        height?: number
+        hidden?: boolean
+        level?: string
+        light?: any
+        locked?: boolean
+        lockRotation?: boolean
+        movementAction: string
+        name: string
+        occludable: any
+        ring: TokenRingData
+        rotation?: number
+        shape?: any
+        sight: any
+        sort?: number
+        texture: {
+          src: string
+          [key: string]: any
+        };
+        width?: number
+        x?: number
+        y?: number
+      }
+
+      type PrototypeTokenData = Omit<TokenData, | '_id' | 'actorId' | 'delta' | 'x' | 'y' | 'elevation' | 'shape' | 'sort' | 'hidden' | 'locked' | '_movementHistory' | '_regions'>
+
+      interface TokenRingData {
+        colors: { background?: string; ring?: string }
+        effects?: number
+        enabled?: number
+        subject: { scale?: number; texture?: string }
+      }
     }
   }
 }

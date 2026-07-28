@@ -11,6 +11,7 @@ declare global {
       interface Actor extends abstract.Document, abstract.Named, abstract.Imaged, abstract.Subtyped<ActorSystem> {
         folder: Folder
         items: utils.Collection<string, Item>
+        prototypeToken: foundry.types.PrototypeTokenData
         getTokenDocument(data?: object, options?: object): Promise<TokenDocument>
       }
 
