@@ -1,3 +1,7 @@
+### v0.3.11
+* Mocks
+  * [mockModules](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockModules)
+
 ### v0.3.10
 * Add folder to `Actor`, `Item`, `JournalEntry`, `Scene`, and `RollTable`.
 
