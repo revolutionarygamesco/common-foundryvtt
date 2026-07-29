@@ -14,7 +14,7 @@ export interface Pronouns {
   PP: string // Possessive pronoun (capitalized)
 }
 
-const getPronouns = (
+export const getPronouns = (
   path: string,
   gender: string
 ): Pronouns => {
@@ -34,5 +34,3 @@ const getPronouns = (
 
   return { s, S, o, O, pa, PA, pp, PP, self, Self }
 }
-
-export default getPronouns

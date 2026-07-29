@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import getPronouns from './pronouns.ts'
+import { getPronouns } from './pronouns.ts'
 
 describe('getPronouns', () => {
   it.each(['masculine', 'feminine', 'third-gender'])('returns %s pronouns', (gender: string) => {
