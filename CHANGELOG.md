@@ -1,3 +1,6 @@
+# v0.3.13
+* Fixed export for  [getPronouns](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getPronouns)
+
 ### v0.3.12
 * Added `Actor.prototypeToken`
 
