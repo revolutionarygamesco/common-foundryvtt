@@ -1,3 +1,6 @@
+# v0.3.14
+* `Actor`, `Item`, `JournalEntry`, `Scene`, and `RollTable`only _sometimes_ have a `Folder`. It should by optional, not a requirement.
+
 # v0.3.13
 * Fixed export for  [getPronouns](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getPronouns)
 
