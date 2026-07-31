@@ -9,7 +9,7 @@ declare global {
       interface TableResultSystem {}
 
       interface Actor extends abstract.Document, abstract.Named, abstract.Imaged, abstract.Subtyped<ActorSystem> {
-        folder: Folder
+        folder: Folder | undefined
         items: utils.Collection<string, Item>
         prototypeToken: foundry.types.PrototypeTokenData
         getTokenDocument(data?: object, options?: object): Promise<TokenDocument>
@@ -40,7 +40,7 @@ declare global {
       }
 
       interface Item extends abstract.Document, abstract.Named, abstract.Imaged, abstract.Subtyped<ItemSystem> {
-        folder: Folder
+        folder: Folder | undefined
       }
 
       class Item {
@@ -48,7 +48,7 @@ declare global {
       }
 
       interface JournalEntry extends abstract.Document, abstract.Named {
-        folder: Folder
+        folder: Folder | undefined
         pages: utils.Collection<string, JournalEntryPage>
       }
 
@@ -68,7 +68,7 @@ declare global {
       interface Scene extends abstract.Document, abstract.Named {
         active: boolean
         drawings: utils.Collection<string, Drawing>
-        folder: Folder
+        folder: Folder | undefined
         regions: utils.Collection<string, RegionDocument>
         tokens: utils.Collection<string, TokenDocument>
         activate(): Promise<Scene>
@@ -82,7 +82,7 @@ declare global {
       }
 
       interface RollTable extends abstract.Document, abstract.Named, abstract.Imaged {
-        folder: Folder
+        folder: Folder | undefined
         draw(options?: object): Promise<any>
       }
 
