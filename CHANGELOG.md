@@ -1,3 +1,6 @@
+# v0.3.15
+* Add types for `foundry.fields`
+
 # v0.3.14
 * `Actor`, `Item`, `JournalEntry`, `Scene`, and `RollTable`only _sometimes_ have a `Folder`. It should by optional, not a requirement.
 
