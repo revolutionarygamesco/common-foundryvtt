@@ -1,3 +1,10 @@
+# v0.3.17
+* Fill in more methods for `Hooks`
+  * `events`
+  * `call`
+  * `callAll`
+  * `onError`
+
 # v0.3.16
 * `foundry.fields` doesn’t actually exist, no matter what
   [the documentation](https://foundryvtt.com/api/classes/foundry.helpers.ClientSettings.html#register)
