@@ -1,3 +1,8 @@
+# v0.3.16
+* `foundry.fields` doesn’t actually exist, no matter what
+  [the documentation](https://foundryvtt.com/api/classes/foundry.helpers.ClientSettings.html#register)
+  suggests. That’s all under `foundry.data.fields`.
+
 # v0.3.15
 * Add types for `foundry.fields`
 
