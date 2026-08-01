@@ -3,9 +3,18 @@ export {}
 declare global {
   namespace foundry {
     interface Hooks {
+      get events(): Record<string, Function[]>
+      call: (hook: string, ...args: any[]) => boolean
+      callAll: (hook: string, ...args: any[]) => void
       on: (name: string, callback: Function) => number
       once: (name: string, callback: Function) => number
       off: (name: string, fn: number | Function) => void
+      onError: (location: string, error: Error, options: {
+        data?: object,
+        log?: string,
+        msg?: string,
+        notify?: string
+      }) => void
     }
 
     interface Game {
