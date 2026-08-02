@@ -1,3 +1,6 @@
+# v0.4.1
+* Add types for data models.
+
 # v0.4.0
 * Mocks
   * [mockHooks](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockHooks)
