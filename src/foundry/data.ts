@@ -4,7 +4,29 @@ declare global {
   namespace foundry {
     namespace data {
       namespace fields {
-        class StringField {
+        class DataField {
+          constructor (options?: object, context?: object)
+        }
+
+        class ShaderField extends DataField {}
+        class AnyField extends DataField {}
+        class BooleanField extends DataField {}
+        class ObjectField extends DataField {}
+        class SchemaField extends DataField {}
+
+        class DataModelSchemaField extends SchemaField {
+          constructor (model: any, options?: object, context?: object)
+        }
+
+        class TypedSchemaField extends DataField {
+          constructor (types: Record<string, any>, options?: object, context?: object)
+        }
+
+        class ArrayField<ElementType = DataField> extends DataField {
+          constructor (element: ElementType, options?: object, context?: object)
+        }
+
+        class StringField extends DataField {
           constructor (options?: object, context?: object)
         }
 
@@ -21,7 +43,7 @@ declare global {
           constructor (documentClass?: object, options?: object, context?: object)
         }
 
-        class NumberField {
+        class NumberField extends DataField {
           constructor (options?: object, context?: object)
         }
 

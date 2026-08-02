@@ -47,6 +47,32 @@ declare global {
       }
 
       type CreateOperation = Document | Document[] | undefined
+
+      class DataModel {
+        constructor(data?: object, options?: object)
+        parent: DataModel | null
+        get invalid (): boolean
+        get schema (): foundry.data.fields.DataModelSchemaField
+        get validationErrors (): { fields: object, joint: object | null }
+        static get schema (): foundry.data.fields.DataModelSchemaField
+        clone (data?: object, context?: object): DataModel | Promise<DataModel>
+        getFieldForProperty (key: string | string[]): foundry.data.fields.DataField | undefined
+        reset (): void
+        toJSON (): object
+        toObject (source?: boolean): object
+        updateSource (changes?: object, options?: object): object
+        validate (options?: object): boolean
+        static cleanData (data?: object, options?: object): object
+        static defineSchema (): foundry.types.DataSchema
+        static fromJSON (json: string): DataModel
+        static fromSource (source: object, context?: object): DataModel
+        static migrateData (source: object, options?: object): object
+        static migrateDataSafe (source: object, options?: object): object
+        static shimData (data: object, options?: {  embedded?: boolean }): object
+        static validateJoint (data: object): void
+      }
+
+      class TypeDataModel<ModelData extends object> extends DataModel {}
     }
   }
 }

@@ -4,6 +4,7 @@ declare global {
   namespace foundry {
     namespace types {
       type FolderTypes = 'ActiveEffect' | 'Actor' | 'Adventure' | 'Item' | 'Scene' | 'JournalEntry' | 'Playlist' | 'RollTable' | 'Cards' | 'Macro' | 'Compendium'
+      type DataSchema = Record<string, foundry.data.fields.DataField>
 
       interface ApplicationPosition {
         height: number | 'auto'
