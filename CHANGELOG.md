@@ -1,3 +1,7 @@
+# v0.4.0
+* Mocks
+  * [mockHooks](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockHooks)
+
 # v0.3.17
 * Fill in more methods for `Hooks`
   * `events`
