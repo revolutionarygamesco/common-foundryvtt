@@ -77,6 +77,7 @@ export default defineConfig({
 * [mockDragData](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockDragData)
 * [mockFolders](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockFolders)
 * [mockFromUuid](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockFromUuid)
+* [mockHooks](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockHooks)
 * [mockLocalize](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockLocalize)
 * [mockModules](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockModules)
 * [mockRoll](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockRoll)
