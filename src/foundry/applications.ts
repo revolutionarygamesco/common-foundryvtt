@@ -120,6 +120,10 @@ declare global {
 
         class DocumentSheetV2 extends ApplicationV2 {
           constructor(options: any, ...args: any[])
+
+          get document (): foundry.ClientDocument
+          get isEditable (): boolean
+          get isVisible (): boolean
         }
       }
 

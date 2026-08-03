@@ -74,5 +74,13 @@ declare global {
 
       class TypeDataModel<ModelData extends object> extends DataModel {}
     }
+
+    interface ClientDocument extends abstract.Document {
+      readonly isOwner: boolean
+      readonly limited: boolean
+      readonly visible: boolean
+      readonly permission: number
+      readonly hasPlayerOwner: boolean
+    }
   }
 }
