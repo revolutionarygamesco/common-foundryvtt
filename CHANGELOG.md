@@ -1,3 +1,9 @@
+# v0.4.2
+* Trying to fully type [CONFIG](https://foundryvtt.com/api/modules/CONFIG.html)
+  is far beyond what this library sets out to do, but by defining it as a
+  global `any`, we at least acknowledge that it’s there and keep Typescript
+  from being an impediment.
+
 # v0.4.1
 * Add types for data models.
 
