@@ -57,4 +57,5 @@ declare global {
   const Hooks: foundry.Hooks
   const game: foundry.Game
   const ui: foundry.UI
+  const CONFIG: any
 }
