@@ -121,33 +121,6 @@ declare global {
         class DocumentSheetV2 extends ApplicationV2 {
           constructor(options: any, ...args: any[])
         }
-
-        class DocumentOwnershipConfig extends DocumentSheetV2 {}
-        class ActiveEffectConfig extends DocumentSheetV2 {}
-        class ActorSheetV2 extends DocumentSheetV2 {}
-        class AdventureImporterV2 extends DocumentSheetV2 {}
-        class CardConfig extends DocumentSheetV2 {}
-        class CardsConfig extends DocumentSheetV2 {}
-        class CombatantConfig extends DocumentSheetV2 {}
-        class FolderConfig extends DocumentSheetV2 {}
-        class ItemSheetV2 extends DocumentSheetV2 {}
-        class LevelConfig extends DocumentSheetV2 {}
-        class MacroConfig extends DocumentSheetV2 {}
-        class PlaceableConfig extends DocumentSheetV2 {}
-        class PlaylistConfig extends DocumentSheetV2 {}
-        class RegionBehaviorConfig extends DocumentSheetV2 {}
-        class RollTableSheet extends DocumentSheetV2 {}
-        class SceneConfig extends DocumentSheetV2 {}
-        class TableResultsConfig extends DocumentSheetV2 {}
-        class UserConfig extends DocumentSheetV2 {}
-        class AdventureExporter extends DocumentSheetV2 {}
-        class BaseSheet extends DocumentSheetV2 {}
-        class JournalEntryCategoryConfig extends DocumentSheetV2 {}
-        class JournalEntryPageSheet extends DocumentSheetV2 {}
-
-        class GridConfig extends DocumentSheetV2 {
-          constructor(options?: object)
-        }
       }
 
       namespace apps {
@@ -159,6 +132,39 @@ declare global {
           static registerSheet (documentClass: any, scope: string, sheetClass: typeof api.ApplicationV2, options?: object): void
           static unregisterSheet (documentClass: any, scope: string, sheetClass: typeof api.ApplicationV2, options?: { types?: string[] }): void
           static updateDefaultSheets (setting?: Record<string, string>): void
+        }
+
+        class DocumentOwnershipConfig extends api.DocumentSheetV2 {}
+
+        class GridConfig extends api.DocumentSheetV2 {
+          constructor(options?: object)
+        }
+      }
+
+      namespace sheets {
+        class ActiveEffectConfig extends api.DocumentSheetV2 {}
+        class ActorSheetV2 extends api.DocumentSheetV2 {}
+        class AdventureImporterV2 extends api.DocumentSheetV2 {}
+        class CardConfig extends api.DocumentSheetV2 {}
+        class CardsConfig extends api.DocumentSheetV2 {}
+        class CombatantConfig extends api.DocumentSheetV2 {}
+        class FolderConfig extends api.DocumentSheetV2 {}
+        class ItemSheetV2 extends api.DocumentSheetV2 {}
+        class LevelConfig extends api.DocumentSheetV2 {}
+        class MacroConfig extends api.DocumentSheetV2 {}
+        class PlaceableConfig extends api.DocumentSheetV2 {}
+        class PlaylistConfig extends api.DocumentSheetV2 {}
+        class RegionBehaviorConfig extends api.DocumentSheetV2 {}
+        class RollTableSheet extends api.DocumentSheetV2 {}
+        class SceneConfig extends api.DocumentSheetV2 {}
+        class TableResultConfig extends api.DocumentSheetV2 {}
+        class UserConfig extends api.DocumentSheetV2 {}
+        class AdventureExporter extends api.DocumentSheetV2 {}
+        class BaseSheet extends api.DocumentSheetV2 {}
+
+        namespace journal {
+          class JournalEntryCategoryConfig extends api.DocumentSheetV2 {}
+          class JournalEntryPageSheet extends api.DocumentSheetV2 {}
         }
       }
 
