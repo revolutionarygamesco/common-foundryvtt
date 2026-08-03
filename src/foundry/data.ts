@@ -12,7 +12,10 @@ declare global {
         class AnyField extends DataField {}
         class BooleanField extends DataField {}
         class ObjectField extends DataField {}
-        class SchemaField extends DataField {}
+
+        class SchemaField extends DataField {
+          fields: Record<string, DataField>
+        }
 
         class DataModelSchemaField extends SchemaField {
           constructor (model: any, options?: Record<string, any>, context?: Record<string, any>)
