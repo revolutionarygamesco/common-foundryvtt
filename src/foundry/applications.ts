@@ -7,20 +7,87 @@ declare global {
         class ApplicationV2 {
           constructor(options?: any)
 
-          readonly options: any
-          readonly element: HTMLElement
-          readonly rendered: boolean
+          options: Readonly<object>
+          position: types.ApplicationPosition
+          tabGroups: Record<string, string | null>
 
-          render(options?: boolean | object, _options?: object): Promise<this>
-          close(options?: object): Promise<this>
+          static BASE_APPLICATION: typeof ApplicationV2
+          static DEFAULT_OPTIONS: object
+          static RENDER_STATES: Record<string, number>
+          static emittedEvents: Readonly<'prerender' | 'render' | 'close' | 'position'>
+          static TABS: Record<string, types.ApplicationTabsConfiguration>
 
-          protected _prepareContext(options: object): Promise<object>
-          protected _onFirstRender(context: object, options: object): Promise<void>
-          protected _onRender(context: object, options: object): Promise<void>
-          protected _onClose(options: object): void
+          get children (): Map<string, ApplicationV2>
+          get classList (): DOMTokenList
+          get element (): HTMLElement
+          get form (): HTMLElement | null
+          get hasFrame (): boolean
+          get id (): string
+          get minimized (): boolean
+          get parent (): ApplicationV2 | null
+          get rendered (): boolean
+          get state (): number
+          get title (): string
+          get window (): object
 
-          static DEFAULT_OPTIONS: any
-          static TABS: any
+          addEventListener (type: string, listener: (event: Event) => any, options?: { once?: boolean }): void
+          attachWindow (options?: object): Promise<ApplicationV2>
+          bringToFront (): void
+          changeTab (tab: string, group: string, options?: object): void
+          close (options?: object): Promise<ApplicationV2>
+          detachWindow (options?: object): Promise<ApplicationV2>
+          dispatchEvent (event: Event): boolean
+          maximize (): Promise<void>
+          minimize (): Promise<void>
+          removeEventListener (type: string, listener: (event: Event) => any): void
+          render (options?: object): Promise<ApplicationV2>
+          renderChild (app: ApplicationV2, options: object): Promise<ApplicationV2>
+          setPosition (position: Partial<types.ApplicationPosition>): types.ApplicationPosition
+          submit (submitOptions?: object): Promise<any>
+
+          protected _attachFrameListeners (): void
+          protected _canAttach (): boolean
+          protected _canRender (options: object): false | void
+          protected _configureRenderOptions (options: object): void
+          protected _createContextMenu (handler: () => object[], selector: string, options?: object): ux.ContextMenu
+          protected _getFrameButtons (options: object): object[]
+          protected _getHeaderControls (): object[]
+          protected _getTabsConfig (group: string): types.ApplicationTabsConfiguration | null
+          protected _headerControlButtons (): Generator<object, any, any>
+          protected _headerControlContextEntries (): Generator<object, any, any>
+          protected _initializeApplicationOptions (options: object): object
+          protected _insertElement (element: HTMLElement, options?: object): Promise<void>
+          protected _onAttach (from: abstract.Document, to: abstract.Document): void
+          protected _onChangeForm (formConfig: object, event: Event): void
+          protected _onClickAction (event: PointerEvent, target: HTMLElement): void
+          protected _onClickTab (event: PointerEvent): void
+          protected _onClose (options: object): void
+          protected _onDetach (from: abstract.Document, to: abstract.Document): void
+          protected _onFirstRender (context: object, options: object): Promise<void>
+          protected _onPosition (position: types.ApplicationPosition): void
+          protected _onRender (context: object, options: object): Promise<void>
+          protected _onSubmitForm (formConfig: object, event: Event | SubmitEvent): Promise<void>
+          protected _postRender (context: object, options: object): Promise<void>
+          protected _preClose (options: object): Promise<void>
+          protected _preFirstRender (context: object, options: object): Promise<void>
+          protected _prepareContext (options: object): Promise<object>
+          protected _prepareTabs (group: string): Record<string, types.ApplicationTab>
+          protected _prePosition (position: types.ApplicationPosition) : void
+          protected _preREnder (context: object, options: object): Promise<void>
+          protected _refit (positionUpdate?: Partial<types.ApplicationPosition>): void
+          protected _removeElement (element: HTMLElement): void
+          protected _renderFrame (options: object): Promise<HTMLElement>
+          protected _renderFrameButtons (options: object): Promise<void>
+          protected _renderHeaderControl (control: object): HTMLElement
+          protected _replaceHTML (result: any, content: HTMLElement, options: object): void
+          protected _tearDown (options: object): void
+          protected _updateFrame (options: object): void
+          protected _updatePosition (position: types.ApplicationPosition): types.ApplicationPosition
+
+          static inheritanceChain (): Generator<typeof ApplicationV2, void, unknown>
+          static instances (): Generator<typeof ApplicationV2, any, any>
+          static parseCSSDimension (style: string, parentDimension: number): number | void
+          static waitForImages (element: HTMLElement): Promise<void>
         }
 
         class HandlebarsApplication extends ApplicationV2 {
@@ -50,6 +117,49 @@ declare global {
             config?: object,
           ): Promise<T | null>
         }
+
+        class DocumentSheetV2 extends ApplicationV2 {
+          constructor(options: any, ...args: any[])
+        }
+
+        class DocumentOwnershipConfig extends DocumentSheetV2 {}
+        class ActiveEffectConfig extends DocumentSheetV2 {}
+        class ActorSheetV2 extends DocumentSheetV2 {}
+        class AdventureImporterV2 extends DocumentSheetV2 {}
+        class CardConfig extends DocumentSheetV2 {}
+        class CardsConfig extends DocumentSheetV2 {}
+        class CombatantConfig extends DocumentSheetV2 {}
+        class FolderConfig extends DocumentSheetV2 {}
+        class ItemSheetV2 extends DocumentSheetV2 {}
+        class LevelConfig extends DocumentSheetV2 {}
+        class MacroConfig extends DocumentSheetV2 {}
+        class PlaceableConfig extends DocumentSheetV2 {}
+        class PlaylistConfig extends DocumentSheetV2 {}
+        class RegionBehaviorConfig extends DocumentSheetV2 {}
+        class RollTableSheet extends DocumentSheetV2 {}
+        class SceneConfig extends DocumentSheetV2 {}
+        class TableResultsConfig extends DocumentSheetV2 {}
+        class UserConfig extends DocumentSheetV2 {}
+        class AdventureExporter extends DocumentSheetV2 {}
+        class BaseSheet extends DocumentSheetV2 {}
+        class JournalEntryCategoryConfig extends DocumentSheetV2 {}
+        class JournalEntryPageSheet extends DocumentSheetV2 {}
+
+        class GridConfig extends DocumentSheetV2 {
+          constructor(options?: object)
+        }
+      }
+
+      namespace apps {
+        class DocumentSheetConfig extends api.ApplicationV2 {
+          static PARTS: Record<string, { template: string; [k: string]: any }>
+          static getSheetClassesForSubType (documentName: string, subType?: string): { defaultClass: string, defaultClasses: Record<string, string>, sheetClasses: Record<string, string> }
+          static getSheetThemeForDocument (document: abstract.Document): string
+          static initializeSheets (): Promise<void>
+          static registerSheet (documentClass: any, scope: string, sheetClass: typeof api.ApplicationV2, options?: object): void
+          static unregisterSheet (documentClass: any, scope: string, sheetClass: typeof api.ApplicationV2, options?: { types?: string[] }): void
+          static updateDefaultSheets (setting?: Record<string, string>): void
+        }
       }
 
       namespace fields {
@@ -73,6 +183,27 @@ declare global {
       }
 
       namespace ux {
+        class ContextMenu {
+          constructor (container: any, selector: string, menuItems: object[], options?: object)
+
+          menuItems: object[]
+          onClose: (event: PointerEvent, target: HTMLElement) => unknown
+          onOpen: (event: PointerEvent, target: HTMLElement) => unknown
+
+          get element (): HTMLElement
+          get eventName (): string
+          get expandUp (): boolean
+          get fixed (): boolean
+          get relative (): 'target' | 'cursor'
+          get selectot (): string
+          get target (): HTMLElement
+          static get implementation (): typeof ContextMenu
+
+          activateListeners (menu: HTMLElement, options?: object): void
+          close (options?: { animate?: boolean, target?: HTMLElement }): Promise<void>
+          render (target: HTMLElement, options?: object): Promise<void>
+        }
+
         class DragDrop {
           constructor(config?: object)
 

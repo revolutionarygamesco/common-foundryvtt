@@ -15,6 +15,28 @@ declare global {
         zIndex: number
       }
 
+      interface ApplicationTab {
+        active: boolean
+        cssClass: string
+        group: string
+        icon?: string
+        id: string
+        label?: string
+        tooltip?: string
+      }
+
+      interface ApplicationTabsConfiguration {
+        initial?: string
+        labelPrefix?: string
+        tabs: {
+          cssClass?: string
+          icon?: string
+          id: string
+          label?: string
+          tooltip?: string
+        }
+      }
+
       interface ElevatedPoint {
         x: number
         y: number
