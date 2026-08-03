@@ -147,13 +147,11 @@ declare global {
 
       namespace sheets {
         class ActiveEffectConfig extends api.DocumentSheetV2 {}
-        class ActorSheetV2 extends api.DocumentSheetV2 {}
         class AdventureImporterV2 extends api.DocumentSheetV2 {}
         class CardConfig extends api.DocumentSheetV2 {}
         class CardsConfig extends api.DocumentSheetV2 {}
         class CombatantConfig extends api.DocumentSheetV2 {}
         class FolderConfig extends api.DocumentSheetV2 {}
-        class ItemSheetV2 extends api.DocumentSheetV2 {}
         class LevelConfig extends api.DocumentSheetV2 {}
         class MacroConfig extends api.DocumentSheetV2 {}
         class PlaceableConfig extends api.DocumentSheetV2 {}
@@ -166,9 +164,22 @@ declare global {
         class AdventureExporter extends api.DocumentSheetV2 {}
         class BaseSheet extends api.DocumentSheetV2 {}
 
+        class ActorSheetV2 extends api.DocumentSheetV2 {
+          get actor (): documents.Actor
+          get token (): documents.TokenDocument | null
+        }
+
+        class ItemSheetV2 extends api.DocumentSheetV2 {
+          get actor (): documents.Actor | null
+          get item (): documents.Item
+        }
+
         namespace journal {
           class JournalEntryCategoryConfig extends api.DocumentSheetV2 {}
-          class JournalEntryPageSheet extends api.DocumentSheetV2 {}
+          class JournalEntryPageSheet extends api.DocumentSheetV2 {
+            get isView (): boolean
+            get page (): documents.JournalEntryPage
+          }
         }
       }
 
