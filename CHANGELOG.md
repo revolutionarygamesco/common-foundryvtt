@@ -1,3 +1,12 @@
+# v0.5.2
+* Added [ClientDocument](https://foundryvtt.com/api/classes/foundry.ClientDocument.html)
+* Added more details for
+  [SchemaField](https://foundryvtt.com/api/classes/foundry.data.fields.SchemaField.html),
+  [ActorSheetV2](https://foundryvtt.com/api/classes/foundry.applications.sheets.ActorSheetV2.html),
+  [ItemSheetV2](https://foundryvtt.com/api/classes/foundry.applications.sheets.ItemSheetV2.html), and
+  [JournalEntryPageSheet](https://foundryvtt.com/api/classes/foundry.applications.sheets.journal.JournalEntryPageSheet.html).
+* Fixed a typo in types for `ContextMenu`.
+
 # v0.5.1
 * Sort classes to correct namespaces.
 
