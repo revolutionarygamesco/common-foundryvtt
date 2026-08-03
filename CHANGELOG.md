@@ -1,3 +1,8 @@
+# v0.5.0
+* Added types for [DocumentSheetConfig](https://foundryvtt.com/api/classes/foundry.applications.apps.DocumentSheetConfig.html)
+* Added a bunch more detail for [ApplicationV2](https://foundryvtt.com/api/classes/foundry.applications.api.ApplicationV2.html)
+  and its endless tree of child classes.
+
 # v0.4.2
 * Trying to fully type [CONFIG](https://foundryvtt.com/api/modules/CONFIG.html)
   is far beyond what this library sets out to do, but by defining it as a
