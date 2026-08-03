@@ -5,7 +5,7 @@ declare global {
     namespace data {
       namespace fields {
         class DataField {
-          constructor (options?: object, context?: object)
+          constructor (options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class ShaderField extends DataField {}
@@ -15,19 +15,19 @@ declare global {
         class SchemaField extends DataField {}
 
         class DataModelSchemaField extends SchemaField {
-          constructor (model: any, options?: object, context?: object)
+          constructor (model: any, options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class TypedSchemaField extends DataField {
-          constructor (types: Record<string, any>, options?: object, context?: object)
+          constructor (types: Record<string, any>, options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class ArrayField<ElementType = DataField> extends DataField {
-          constructor (element: ElementType, options?: object, context?: object)
+          constructor (element: ElementType, options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class StringField extends DataField {
-          constructor (options?: object, context?: object)
+          constructor (options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class ColorField extends StringField {}
@@ -40,11 +40,11 @@ declare global {
         class JavaScriptField extends StringField {}
 
         class DocumentTypeField extends StringField {
-          constructor (documentClass?: object, options?: object, context?: object)
+          constructor (documentClass?: Record<string, any>, options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class NumberField extends DataField {
-          constructor (options?: object, context?: object)
+          constructor (options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class AlphaField extends NumberField {}

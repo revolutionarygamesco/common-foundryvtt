@@ -11,12 +11,12 @@ declare global {
         readonly documentName: string
         readonly parent: Document | null
         readonly parentCollection: string | null
-        readonly flags: any
+        readonly flags: Record<string, Record<string, unknown>>
 
-        toObject(source?: boolean): any
-        create(data?: any, operation?: any): Promise<this | undefined>
-        update(data?: any, operation?: any): Promise<this | undefined>
-        delete(operation?: any): Promise<this | undefined>
+        toObject(source?: boolean): Record<string, any>
+        create(data?: Record<string, any>, operation?: Record<string, any>): Promise<this | undefined>
+        update(data?: Record<string, any>, operation?: Record<string, any>): Promise<this | undefined>
+        delete(operation?: Record<string, any>): Promise<this | undefined>
 
         getFlag<T>(scope: string, key: string): T | undefined
         setFlag<T>(scope: string, key: string, value: T): Promise<this>
@@ -24,18 +24,18 @@ declare global {
 
         createEmbeddedDocuments(
           embeddedName: string,
-          data?: object[],
-          operation?: object
+          data?: Array<Record<string, any>>,
+          operation?: Record<string, any>
         ): Promise<Document[]>
         updateEmbeddedDocuments(
           embeddedName: string,
-          updates?: object[],
-          operation?: object
+          updates?: Array<Record<string, any>>,
+          operation?: Record<string, any>
         ): Promise<Document[]>
         deleteEmbeddedDocuments(
           embeddedName: string,
           ids: string[],
-          operation?: object
+          operation?: Record<string, any>
         ): Promise<Document[]>
       }
 
@@ -49,27 +49,27 @@ declare global {
       type CreateOperation = Document | Document[] | undefined
 
       class DataModel {
-        constructor(data?: object, options?: object)
+        constructor(data?: Record<string, any>, options?: Record<string, any>)
         parent: DataModel | null
         get invalid (): boolean
         get schema (): foundry.data.fields.DataModelSchemaField
-        get validationErrors (): { fields: object, joint: object | null }
+        get validationErrors (): { fields: Record<string, any>, joint: Record<string, any> | null }
         static get schema (): foundry.data.fields.DataModelSchemaField
-        clone (data?: object, context?: object): DataModel | Promise<DataModel>
+        clone (data?: Record<string, any>, context?: Record<string, any>): DataModel | Promise<DataModel>
         getFieldForProperty (key: string | string[]): foundry.data.fields.DataField | undefined
         reset (): void
-        toJSON (): object
-        toObject (source?: boolean): object
-        updateSource (changes?: object, options?: object): object
-        validate (options?: object): boolean
-        static cleanData (data?: object, options?: object): object
+        toJSON (): Record<string, any>
+        toObject (source?: boolean): Record<string, any>
+        updateSource (changes?: Record<string, any>, options?: Record<string, any>): Record<string, any>
+        validate (options?: Record<string, any>): boolean
+        static cleanData (data?: Record<string, any>, options?: Record<string, any>): Record<string, any>
         static defineSchema (): foundry.types.DataSchema
         static fromJSON (json: string): DataModel
-        static fromSource (source: object, context?: object): DataModel
-        static migrateData (source: object, options?: object): object
-        static migrateDataSafe (source: object, options?: object): object
-        static shimData (data: object, options?: {  embedded?: boolean }): object
-        static validateJoint (data: object): void
+        static fromSource (source: Record<string, any>, context?: Record<string, any>): DataModel
+        static migrateData (source: Record<string, any>, options?: Record<string, any>): Record<string, any>
+        static migrateDataSafe (source: Record<string, any>, options?: Record<string, any>): Record<string, any>
+        static shimData (data: Record<string, any>, options?: {  embedded?: boolean }): Record<string, any>
+        static validateJoint (data: Record<string, any>): void
       }
 
       class TypeDataModel<ModelData extends object> extends DataModel {}

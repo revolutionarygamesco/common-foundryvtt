@@ -7,12 +7,12 @@ declare global {
         class ApplicationV2 {
           constructor(options?: any)
 
-          options: Readonly<object>
+          options: Readonly<Record<string, any>>
           position: types.ApplicationPosition
           tabGroups: Record<string, string | null>
 
           static BASE_APPLICATION: typeof ApplicationV2
-          static DEFAULT_OPTIONS: object
+          static DEFAULT_OPTIONS: Record<string, any>
           static RENDER_STATES: Record<string, number>
           static emittedEvents: Readonly<'prerender' | 'render' | 'close' | 'position'>
           static TABS: Record<string, types.ApplicationTabsConfiguration>
@@ -28,60 +28,60 @@ declare global {
           get rendered (): boolean
           get state (): number
           get title (): string
-          get window (): object
+          get window (): Record<string, HTMLElement | Function | string | boolean | types.ApplicationPosition>
 
           addEventListener (type: string, listener: (event: Event) => any, options?: { once?: boolean }): void
-          attachWindow (options?: object): Promise<ApplicationV2>
+          attachWindow (options?: Record<string, any>): Promise<ApplicationV2>
           bringToFront (): void
-          changeTab (tab: string, group: string, options?: object): void
-          close (options?: object): Promise<ApplicationV2>
-          detachWindow (options?: object): Promise<ApplicationV2>
+          changeTab (tab: string, group: string, options?: Record<string, any>): void
+          close (options?: Record<string, any>): Promise<ApplicationV2>
+          detachWindow (options?: Record<string, any>): Promise<ApplicationV2>
           dispatchEvent (event: Event): boolean
           maximize (): Promise<void>
           minimize (): Promise<void>
           removeEventListener (type: string, listener: (event: Event) => any): void
-          render (options?: object): Promise<ApplicationV2>
-          renderChild (app: ApplicationV2, options: object): Promise<ApplicationV2>
+          render (options?: Record<string, any>): Promise<ApplicationV2>
+          renderChild (app: ApplicationV2, options: Record<string, any>): Promise<ApplicationV2>
           setPosition (position: Partial<types.ApplicationPosition>): types.ApplicationPosition
-          submit (submitOptions?: object): Promise<any>
+          submit (submitOptions?: Record<string, any>): Promise<any>
 
           protected _attachFrameListeners (): void
           protected _canAttach (): boolean
-          protected _canRender (options: object): false | void
-          protected _configureRenderOptions (options: object): void
-          protected _createContextMenu (handler: () => object[], selector: string, options?: object): ux.ContextMenu
-          protected _getFrameButtons (options: object): object[]
-          protected _getHeaderControls (): object[]
+          protected _canRender (options: Record<string, any>): false | void
+          protected _configureRenderOptions (options: Record<string, any>): void
+          protected _createContextMenu (handler: () => Array<Record<string, any>>, selector: string, options?: Record<string, any>): ux.ContextMenu
+          protected _getFrameButtons (options: Record<string, any>): Array<Record<string, any>>
+          protected _getHeaderControls (): Array<Record<string, any>>
           protected _getTabsConfig (group: string): types.ApplicationTabsConfiguration | null
-          protected _headerControlButtons (): Generator<object, any, any>
-          protected _headerControlContextEntries (): Generator<object, any, any>
-          protected _initializeApplicationOptions (options: object): object
-          protected _insertElement (element: HTMLElement, options?: object): Promise<void>
+          protected _headerControlButtons (): Generator<Record<string, any>, any, any>
+          protected _headerControlContextEntries (): Generator<Record<string, any>, any, any>
+          protected _initializeApplicationOptions (options: Record<string, any>): Record<string, any>
+          protected _insertElement (element: HTMLElement, options?: Record<string, any>): Promise<void>
           protected _onAttach (from: abstract.Document, to: abstract.Document): void
-          protected _onChangeForm (formConfig: object, event: Event): void
+          protected _onChangeForm (formConfig: Record<string, any>, event: Event): void
           protected _onClickAction (event: PointerEvent, target: HTMLElement): void
           protected _onClickTab (event: PointerEvent): void
-          protected _onClose (options: object): void
+          protected _onClose (options: Record<string, any>): void
           protected _onDetach (from: abstract.Document, to: abstract.Document): void
-          protected _onFirstRender (context: object, options: object): Promise<void>
+          protected _onFirstRender (context: Record<string, any>, options: Record<string, any>): Promise<void>
           protected _onPosition (position: types.ApplicationPosition): void
-          protected _onRender (context: object, options: object): Promise<void>
-          protected _onSubmitForm (formConfig: object, event: Event | SubmitEvent): Promise<void>
-          protected _postRender (context: object, options: object): Promise<void>
-          protected _preClose (options: object): Promise<void>
-          protected _preFirstRender (context: object, options: object): Promise<void>
-          protected _prepareContext (options: object): Promise<object>
+          protected _onRender (context: Record<string, any>, options: Record<string, any>): Promise<void>
+          protected _onSubmitForm (formConfig: Record<string, any>, event: Event | SubmitEvent): Promise<void>
+          protected _postRender (context: Record<string, any>, options: Record<string, any>): Promise<void>
+          protected _preClose (options: Record<string, any>): Promise<void>
+          protected _preFirstRender (context: Record<string, any>, options: Record<string, any>): Promise<void>
+          protected _prepareContext (options: Record<string, any>): Promise<Record<string, any>>
           protected _prepareTabs (group: string): Record<string, types.ApplicationTab>
           protected _prePosition (position: types.ApplicationPosition) : void
-          protected _preREnder (context: object, options: object): Promise<void>
+          protected _preREnder (context: Record<string, any>, options: Record<string, any>): Promise<void>
           protected _refit (positionUpdate?: Partial<types.ApplicationPosition>): void
           protected _removeElement (element: HTMLElement): void
-          protected _renderFrame (options: object): Promise<HTMLElement>
-          protected _renderFrameButtons (options: object): Promise<void>
-          protected _renderHeaderControl (control: object): HTMLElement
-          protected _replaceHTML (result: any, content: HTMLElement, options: object): void
-          protected _tearDown (options: object): void
-          protected _updateFrame (options: object): void
+          protected _renderFrame (options: Record<string, any>): Promise<HTMLElement>
+          protected _renderFrameButtons (options: Record<string, any>): Promise<void>
+          protected _renderHeaderControl (control: Record<string, any>): HTMLElement
+          protected _replaceHTML (result: any, content: HTMLElement, options: Record<string, any>): void
+          protected _tearDown (options: Record<string, any>): void
+          protected _updateFrame (options: Record<string, any>): void
           protected _updatePosition (position: types.ApplicationPosition): types.ApplicationPosition
 
           static inheritanceChain (): Generator<typeof ApplicationV2, void, unknown>
@@ -95,7 +95,7 @@ declare global {
 
           static PARTS: Record<string, { template: string; [k: string]: any }>
 
-          protected _preparePartContext(partId: string, context: object, options: object): Promise<object>
+          protected _preparePartContext(partId: string, context: Record<string, any>, options: Record<string, any>): Promise<Record<string, any>>
         }
 
         function HandlebarsApplicationMixin<T extends foundry.abstract.Constructor<ApplicationV2>>(
@@ -105,16 +105,16 @@ declare global {
         }
 
         class DialogV2 extends ApplicationV2 {
-          constructor(options?: object)
+          constructor(options?: Record<string, any>)
 
-          static wait<T = string>(config?: object): Promise<T | null>
-          static prompt<T = string>(config?: object): Promise<T | null>
-          static confirm<T = boolean>(config?: object): Promise<T | null>
-          static input<T = Record<string, unknown>>(config?: object): Promise<T | null>
+          static wait<T = string>(config?: Record<string, any>): Promise<T | null>
+          static prompt<T = string>(config?: Record<string, any>): Promise<T | null>
+          static confirm<T = boolean>(config?: Record<string, any>): Promise<T | null>
+          static input<T = Record<string, unknown>>(config?: Record<string, any>): Promise<T | null>
           static query<T = unknown>(
             user: documents.User | string,
             type: 'input' | 'prompt' | 'confirm' | 'wait',
-            config?: object,
+            config?: Record<string, any>,
           ): Promise<T | null>
         }
 
@@ -129,7 +129,7 @@ declare global {
           static getSheetClassesForSubType (documentName: string, subType?: string): { defaultClass: string, defaultClasses: Record<string, string>, sheetClasses: Record<string, string> }
           static getSheetThemeForDocument (document: abstract.Document): string
           static initializeSheets (): Promise<void>
-          static registerSheet (documentClass: any, scope: string, sheetClass: typeof api.ApplicationV2, options?: object): void
+          static registerSheet (documentClass: any, scope: string, sheetClass: typeof api.ApplicationV2, options?: Record<string, any>): void
           static unregisterSheet (documentClass: any, scope: string, sheetClass: typeof api.ApplicationV2, options?: { types?: string[] }): void
           static updateDefaultSheets (setting?: Record<string, string>): void
         }
@@ -137,7 +137,7 @@ declare global {
         class DocumentOwnershipConfig extends api.DocumentSheetV2 {}
 
         class GridConfig extends api.DocumentSheetV2 {
-          constructor(options?: object)
+          constructor(options?: Record<string, any>)
         }
       }
 
@@ -169,30 +169,30 @@ declare global {
       }
 
       namespace fields {
-        function createCheckboxInput(config?: object): HTMLInputElement
-        function createEditorInput(config?: object): HTMLDivElement
-        function createFontAwesomeIcon(glyph: string, options?: object): HTMLElement
-        function createFormGroup(config?: object): HTMLDivElement
-        function createMultiSelectInput(config?: object): Element
-        function createNumberInput(config?: object): HTMLInputElement
-        function createSelectInput(config?: object): HTMLSelectElement
-        function createTextareaInput(config?: object): HTMLTextAreaElement
-        function createTextInput(config?: object): HTMLInputElement
-        function prepareSelectOptionGroups(config?: object): { group: string; options: object[] }[]
-        function setInputAttributes(input: HTMLElement, config?: object): void
+        function createCheckboxInput(config?: Record<string, any>): HTMLInputElement
+        function createEditorInput(config?: Record<string, any>): HTMLDivElement
+        function createFontAwesomeIcon(glyph: string, options?: Record<string, any>): HTMLElement
+        function createFormGroup(config?: Record<string, any>): HTMLDivElement
+        function createMultiSelectInput(config?: Record<string, any>): Element
+        function createNumberInput(config?: Record<string, any>): HTMLInputElement
+        function createSelectInput(config?: Record<string, any>): HTMLSelectElement
+        function createTextareaInput(config?: Record<string, any>): HTMLTextAreaElement
+        function createTextInput(config?: Record<string, any>): HTMLInputElement
+        function prepareSelectOptionGroups(config?: Record<string, any>): { group: string; options: Array<Record<string, any>> }[]
+        function setInputAttributes(input: HTMLElement, config?: Record<string, any>): void
       }
 
       namespace handlebars {
         function loadTemplates(paths: string[] | Record<string, string>): Promise<unknown[]>
-        function renderTemplate(path: string, data: object): Promise<string>
+        function renderTemplate(path: string, data: Record<string, any>): Promise<string>
         function getTemplate(path: string, id?: string): Promise<unknown>
       }
 
       namespace ux {
         class ContextMenu {
-          constructor (container: any, selector: string, menuItems: object[], options?: object)
+          constructor (container: any, selector: string, menuItems: Array<Record<string, any>>, options?: Record<string, any>)
 
-          menuItems: object[]
+          menuItems: Array<Record<string, any>>
           onClose: (event: PointerEvent, target: HTMLElement) => unknown
           onOpen: (event: PointerEvent, target: HTMLElement) => unknown
 
@@ -205,13 +205,13 @@ declare global {
           get target (): HTMLElement
           static get implementation (): typeof ContextMenu
 
-          activateListeners (menu: HTMLElement, options?: object): void
+          activateListeners (menu: HTMLElement, options?: Record<string, any>): void
           close (options?: { animate?: boolean, target?: HTMLElement }): Promise<void>
-          render (target: HTMLElement, options?: object): Promise<void>
+          render (target: HTMLElement, options?: Record<string, any>): Promise<void>
         }
 
         class DragDrop {
-          constructor(config?: object)
+          constructor(config?: Record<string, any>)
 
           static implementation: typeof DragDrop
 
@@ -228,13 +228,13 @@ declare global {
         }
 
         class FormDataExtended extends FormData {
-          constructor(form: HTMLFormElement, options?: object)
+          constructor(form: HTMLFormElement, options?: Record<string, any>)
           readonly object: Record<string, unknown>
         }
 
         class TextEditor {
-          static enrichHTML(content: string, options?: object): Promise<string>
-          static getDragEventData(event: DragEvent): object
+          static enrichHTML(content: string, options?: Record<string, any>): Promise<string>
+          static getDragEventData(event: DragEvent): Record<string, any>
         }
       }
     }
