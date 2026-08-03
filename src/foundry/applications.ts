@@ -216,7 +216,7 @@ declare global {
           get expandUp (): boolean
           get fixed (): boolean
           get relative (): 'target' | 'cursor'
-          get selectot (): string
+          get selector (): string
           get target (): HTMLElement
           static get implementation (): typeof ContextMenu
 
