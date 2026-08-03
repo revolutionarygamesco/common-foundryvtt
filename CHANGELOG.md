@@ -1,3 +1,6 @@
+# v0.5.1
+* Sort classes to correct namespaces.
+
 # v0.5.0
 * Added types for [DocumentSheetConfig](https://foundryvtt.com/api/classes/foundry.applications.apps.DocumentSheetConfig.html)
 * Added a bunch more detail for [ApplicationV2](https://foundryvtt.com/api/classes/foundry.applications.api.ApplicationV2.html)
