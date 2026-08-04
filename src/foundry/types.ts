@@ -28,13 +28,13 @@ declare global {
       interface ApplicationTabsConfiguration {
         initial?: string
         labelPrefix?: string
-        tabs: {
+        tabs: Array<{
           cssClass?: string
           icon?: string
           id: string
           label?: string
           tooltip?: string
-        }
+        }>
       }
 
       interface ElevatedPoint {
