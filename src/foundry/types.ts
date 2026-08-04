@@ -118,5 +118,15 @@ declare global {
         subject: { scale?: number; texture?: string }
       }
     }
+
+    interface HandlebarsTemplatePart {
+      classes?: string[]
+      forms?: Record<string, Record<string, any>>
+      id?: string
+      root?: boolean
+      scrollable?: string[]
+      template: string
+      templates?: string[]
+    }
   }
 }

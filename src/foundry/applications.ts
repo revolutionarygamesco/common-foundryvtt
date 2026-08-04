@@ -95,6 +95,7 @@ declare global {
 
           static PARTS: Record<string, { template: string; [k: string]: any }>
 
+          protected _configureRenderParts(options: Record<string, any>): Record<string, foundry.HandlebarsTemplatePart>
           protected _preparePartContext(partId: string, context: Record<string, any>, options: Record<string, any>): Promise<Record<string, any>>
         }
 
