@@ -2,6 +2,7 @@ import './foundry/index.js'
 
 export { findFolder } from './utilities/find-folder.ts'
 export { generateApplicationPosition } from './utilities/app-pos.ts'
+export { getClickedDocument } from './utilities/clicked-document.ts'
 export { getDroppedDocument } from './utilities/dropped-document.ts'
 export { generateID } from './utilities/generate-id.ts'
 export { getID } from './utilities/get-id.ts'
