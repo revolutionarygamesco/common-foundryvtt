@@ -1,3 +1,6 @@
+# v0.5.5
+* Add [HandlebarsApplication._configureRenderParts](https://foundryvtt.com/api/classes/foundry.HandlebarsApplication.html#_configurerenderparts)
+
 # v0.5.4
 * Methods
   * [getClickedDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getClickedDocument)
