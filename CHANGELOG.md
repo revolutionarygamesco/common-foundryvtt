@@ -1,3 +1,7 @@
+# v0.5.4
+* Methods
+  * [getClickedDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getClickedDocument)
+
 # v0.5.3
 * Fix [ApplicationTabsConfiguration](https://foundryvtt.com/api/interfaces/foundry.applications.types.ApplicationTabsConfiguration.html)
 

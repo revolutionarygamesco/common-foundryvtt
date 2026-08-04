@@ -52,6 +52,7 @@ export default defineConfig({
 
 * [findFolder](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/findFolder)
 * [generateApplicationPosition](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/generateApplicationPosition)
+* [getClickedDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getClickedDocument)
 * [getDroppedDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getDroppedDocument)
 * [generateID](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/generateID)
 * [getID](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/getID)
