@@ -1,3 +1,6 @@
+# v0.5.3
+* Fix [ApplicationTabsConfiguration](https://foundryvtt.com/api/interfaces/foundry.applications.types.ApplicationTabsConfiguration.html)
+
 # v0.5.2
 * Added [ClientDocument](https://foundryvtt.com/api/classes/foundry.ClientDocument.html)
 * Added more details for
