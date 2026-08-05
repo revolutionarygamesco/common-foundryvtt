@@ -1,3 +1,8 @@
+# v0.5.6
+* Add [_onRevealSecret](https://foundryvtt.com/api/classes/foundry.applications.api.DocumentSheetV2.html#_onrevealsecret)
+  and [_prepareSubmitData](https://foundryvtt.com/api/classes/foundry.applications.api.DocumentSheetV2.html#_preparesubmitdata)
+  to [DocumentSheetV2](https://foundryvtt.com/api/classes/foundry.applications.api.DocumentSheetV2.html).
+
 # v0.5.5
 * Add [HandlebarsApplication._configureRenderParts](https://foundryvtt.com/api/classes/foundry.HandlebarsApplication.html#_configurerenderparts)
 
