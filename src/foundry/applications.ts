@@ -125,6 +125,9 @@ declare global {
           get document (): foundry.ClientDocument
           get isEditable (): boolean
           get isVisible (): boolean
+
+          _onRevealSecret (event: Event): void
+          _prepareSubmitData (event: SubmitEvent, form: HTMLFormElement, formData: ux.FormDataExtended, updateData?: object): object
         }
       }
 
