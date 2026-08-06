@@ -1,3 +1,8 @@
+# v0.5.7
+* Switch [DocumentSheetV2._prepareSubmitData](https://foundryvtt.com/api/classes/foundry.applications.api.DocumentSheetV2.html#_preparesubmitdata)
+  return type from `object` to `Record<string, any>`. This allows methods to
+  refer to the return object’s properties without causing an error.
+
 # v0.5.6
 * Add [_onRevealSecret](https://foundryvtt.com/api/classes/foundry.applications.api.DocumentSheetV2.html#_onrevealsecret)
   and [_prepareSubmitData](https://foundryvtt.com/api/classes/foundry.applications.api.DocumentSheetV2.html#_preparesubmitdata)
