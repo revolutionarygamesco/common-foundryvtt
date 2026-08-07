@@ -1,3 +1,6 @@
+# v0.5.9
+* Add subclasses of [ObjectField](https://foundryvtt.com/api/classes/foundry.data.fields.ObjectField.html).
+
 # v0.5.8
 * Add `sort` to `Actor`, `Adventure`, `Item`, `JournalEntry`,
   `JournalEntryPage`, `Scene`, `TokenDocument`, and `RollTable`.
