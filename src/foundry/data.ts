@@ -12,6 +12,15 @@ declare global {
         class AnyField extends DataField {}
         class BooleanField extends DataField {}
         class ObjectField extends DataField {}
+        class DocumentOwnershipField extends ObjectField {}
+
+        class TypeDataField extends ObjectField {
+          constructor (document: abstract.Constructor<abstract.Document>, options?: Record<string, any>, context?: Record<string, any>)
+        }
+
+        class TypedObjectField extends ObjectField {
+          constructor (element: DataField, options?: Record<string, any>, context?: Record<string, any>)
+        }
 
         class SchemaField extends DataField {
           fields: Record<string, DataField>
