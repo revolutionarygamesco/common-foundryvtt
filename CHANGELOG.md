@@ -1,3 +1,7 @@
+# v0.5.8
+* Add `sort` to `Actor`, `Adventure`, `Item`, `JournalEntry`,
+  `JournalEntryPage`, `Scene`, `TokenDocument`, and `RollTable`.
+
 # v0.5.7
 * Switch [DocumentSheetV2._prepareSubmitData](https://foundryvtt.com/api/classes/foundry.applications.api.DocumentSheetV2.html#_preparesubmitdata)
   return type from `object` to `Record<string, any>`. This allows methods to
