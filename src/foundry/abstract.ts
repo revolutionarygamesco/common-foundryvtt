@@ -41,6 +41,7 @@ declare global {
 
       interface Named { name: string }
       interface Imaged { img: string }
+      interface Sorted { sort: number }
       interface Subtyped<S> {
         type: string
         system: S
