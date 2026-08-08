@@ -1,3 +1,6 @@
+# v0.5.11
+* Add type for [setProperty](https://foundryvtt.com/api/functions/foundry.utils.setProperty.html).
+
 # v0.5.10
 * Add type for [getProperty](https://foundryvtt.com/api/functions/foundry.utils.getProperty.html).
 
