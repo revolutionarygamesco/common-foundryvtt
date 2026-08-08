@@ -22,6 +22,7 @@ declare global {
       function unescapeHTML (content: string): string
       function fromUuid (uuid: string, options?: { invalid?: boolean, relative?: foundry.abstract.Document }): Promise<foundry.abstract.Document | null>
       function getProperty (object: Record<string, any>, key: string): any
+      function setProperty (object: Record<string, any>, key: string, value: any): boolean
     }
   }
 }
