@@ -1,3 +1,6 @@
+# v0.5.10
+* Add type for [getProperty](https://foundryvtt.com/api/functions/foundry.utils.getProperty.html).
+
 # v0.5.9
 * Add subclasses of [ObjectField](https://foundryvtt.com/api/classes/foundry.data.fields.ObjectField.html).
 
