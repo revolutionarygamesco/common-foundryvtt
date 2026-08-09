@@ -7,6 +7,7 @@ export { getDroppedDocument } from './utilities/dropped-document.ts'
 export { generateID } from './utilities/generate-id.ts'
 export { getID } from './utilities/get-id.ts'
 export { getPronouns } from './utilities/pronouns.ts'
+export { loadDocument } from './utilities/load-document.ts'
 export { makeLink, type Linkable } from './utilities/make-link.ts'
 
 export { check } from './wrappers/check.ts'
