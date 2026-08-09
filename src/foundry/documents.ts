@@ -95,6 +95,7 @@ declare global {
 
       interface User extends abstract.Named {
         id: string
+        get isGM (): boolean
       }
 
       interface Users extends utils.Collection<string, User> {
