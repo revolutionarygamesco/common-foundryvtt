@@ -22,6 +22,9 @@ declare global {
         setFlag<T>(scope: string, key: string, value: T): Promise<this>
         unsetFlag(scope: string, key: string): Promise<this>
 
+        getUserLevel (user?: foundry.documents.User): number
+        testUserPermission (user: foundry.documents.User, permission: number, options?: { exact?: boolean }): boolean
+
         createEmbeddedDocuments(
           embeddedName: string,
           data?: Array<Record<string, any>>,
