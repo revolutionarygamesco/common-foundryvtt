@@ -1,3 +1,6 @@
+# v0.5.14
+* Add [User.isGM](https://foundryvtt.com/api/classes/foundry.documents.User.html#isgm).
+
 # v0.5.13
 * Add [Document.getUserLevel](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#getuserlevel)
   and [Document.testUserPermission](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#testuserpermission).
