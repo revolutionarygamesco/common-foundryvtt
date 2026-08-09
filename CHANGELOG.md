@@ -1,3 +1,7 @@
+# v0.5.12
+* Methods
+  * [loadDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/loadDocument)
+
 # v0.5.11
 * Add type for [setProperty](https://foundryvtt.com/api/functions/foundry.utils.setProperty.html).
 
