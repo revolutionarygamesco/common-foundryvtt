@@ -1,3 +1,7 @@
+# v0.5.13
+* Add [Document.getUserLevel](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#getuserlevel)
+  and [Document.testUserPermission](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#testuserpermission).
+
 # v0.5.12
 * Methods
   * [loadDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/loadDocument)
