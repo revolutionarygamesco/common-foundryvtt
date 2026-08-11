@@ -1,3 +1,6 @@
+$ v0.5.15
+* Add [TypedObjectField.element](https://foundryvtt.com/api/classes/foundry.data.fields.TypedObjectField.html#element).
+
 # v0.5.14
 * Add [User.isGM](https://foundryvtt.com/api/classes/foundry.documents.User.html#isgm).
 
