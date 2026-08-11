@@ -19,6 +19,7 @@ declare global {
         }
 
         class TypedObjectField extends ObjectField {
+          element: DataField
           constructor (element: DataField, options?: Record<string, any>, context?: Record<string, any>)
         }
 
