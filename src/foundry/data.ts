@@ -18,9 +18,9 @@ declare global {
           constructor (document: abstract.Constructor<abstract.Document>, options?: Record<string, any>, context?: Record<string, any>)
         }
 
-        class TypedObjectField extends ObjectField {
-          element: DataField
-          constructor (element: DataField, options?: Record<string, any>, context?: Record<string, any>)
+        class TypedObjectField<T extends DataField = DataField> extends ObjectField {
+          element: T
+          constructor (element: T, options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class SchemaField extends DataField {
@@ -35,8 +35,9 @@ declare global {
           constructor (types: Record<string, any>, options?: Record<string, any>, context?: Record<string, any>)
         }
 
-        class ArrayField<ElementType = DataField> extends DataField {
-          constructor (element: ElementType, options?: Record<string, any>, context?: Record<string, any>)
+        class ArrayField<T extends DataField = DataField> extends DataField {
+          element: T
+          constructor (element: T, options?: Record<string, any>, context?: Record<string, any>)
         }
 
         class StringField extends DataField {
