@@ -1,4 +1,8 @@
-$ v0.5.15
+# v0.5.16
+* Use generics for [TypedObjectField](https://foundryvtt.com/api/classes/foundry.data.fields.TypedObjectField.html)
+  and [ArrayField](https://foundryvtt.com/api/classes/foundry.data.fields.ArrayField.html).
+
+# v0.5.15
 * Add [TypedObjectField.element](https://foundryvtt.com/api/classes/foundry.data.fields.TypedObjectField.html#element).
 
 # v0.5.14
