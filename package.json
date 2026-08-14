@@ -74,7 +74,7 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "@revolutionarygamesco/common": "^1.2.6"
+    "@revolutionarygamesco/common": "^1.2.8"
   },
   "allowScripts": {
     "fsevents@2.3.3": true
