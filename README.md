@@ -75,15 +75,19 @@ export default defineConfig({
 
 ### Mocks
 
+* [mockActor](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockActor)]
 * [mockActors](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockActors)]
 * [mockChatMessage](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockChatMessage)
 * [mockCollection](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockCollection)
+* [mockDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockDocument)
 * [mockDragData](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockDragData)
 * [mockFolders](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockFolders)
 * [mockFromUuid](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockFromUuid)
 * [mockHooks](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockHooks)
+* [mockItem](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockItem)
 * [mockItems](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockItems)
 * [mockJournal](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockJournal)
+* [mockJournalEntry](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockJournalEntry)
 * [mockLocalize](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockLocalize)
 * [mockModules](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockModules)
 * [mockRoll](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockRoll)
