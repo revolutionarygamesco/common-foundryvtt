@@ -1,3 +1,15 @@
+# v0.5.18
+* Add `game.items`
+* Mocks
+  * [mockCollection](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockCollection)
+  * [mockDocument](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockDocument)
+  * [mockActor](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockActor)
+  * [mockActors](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockActors)
+  * [mockItem](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockItem)
+  * [mockItems](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockItems)
+  * [mockJournal](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockJournal)
+  * [mockJournalEntry](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/mockJournalEntry)
+
 # v0.5.17
 * Add `game.journal`
 
