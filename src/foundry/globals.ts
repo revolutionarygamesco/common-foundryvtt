@@ -23,6 +23,7 @@ declare global {
       }
       actors: foundry.utils.Collection<string, foundry.documents.Actor>
       folders: foundry.utils.Collection<string, foundry.documents.Folder>
+      journal: foundry.utils.Collection<string, foundry.documents.JournalEntry>
       modules: foundry.utils.Collection<string, foundry.packages.Module>
       packs: foundry.utils.Collection<string, any>
       paused: boolean
