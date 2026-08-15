@@ -1,5 +1,6 @@
 export * from './from-uuid.ts'
 export * from './chat.ts'
+export * from './collection.ts'
 export * from './drag-data.ts'
 export * from './folders.ts'
 export * from './hooks.ts'
