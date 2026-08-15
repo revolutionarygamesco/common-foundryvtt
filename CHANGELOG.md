@@ -1,3 +1,6 @@
+# v0.5.17
+* Add `game.journal`
+
 # v0.5.16
 * Use generics for [TypedObjectField](https://foundryvtt.com/api/classes/foundry.data.fields.TypedObjectField.html)
   and [ArrayField](https://foundryvtt.com/api/classes/foundry.data.fields.ArrayField.html).
