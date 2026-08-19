@@ -22,3 +22,4 @@ export { scopeLocalizer } from './wrappers/scope-localizer.ts'
 export { whisper, type WhisperOptions, type WhisperCreate } from './wrappers/whisper.ts'
 
 export { type Sheet } from './sheet/sheet.ts'
+export { type SheetTab } from './sheet/tab.ts'
