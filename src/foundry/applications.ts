@@ -126,6 +126,8 @@ declare global {
           get isEditable (): boolean
           get isVisible (): boolean
 
+          _onDrop (event: DragEvent): Promise<void>
+          _canDragDrop (selector: string): boolean
           _onRevealSecret (event: Event): void
           _prepareSubmitData (event: SubmitEvent, form: HTMLFormElement, formData: ux.FormDataExtended, updateData?: Record<string, any>): Record<string, any>
         }
