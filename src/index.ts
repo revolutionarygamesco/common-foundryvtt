@@ -24,3 +24,4 @@ export { whisper, type WhisperOptions, type WhisperCreate } from './wrappers/whi
 export { type Sheet } from './sheet/sheet.ts'
 export { type SheetTab } from './sheet/tab.ts'
 export { TabbedSheetMixin, type TabbedSheet, type TabbedSheetStatics } from './sheet/tabbed.ts'
+export { TabbedActorSheet } from './sheet/tabbed-actor.ts'
