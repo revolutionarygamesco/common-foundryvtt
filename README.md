@@ -48,7 +48,12 @@ export default defineConfig({
 
 ## Methods
 
-### Methods
+### Application classes
+
+* [TabbedActorSheet](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/TabbedActorSheet)
+* [TabbedItemSheet](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/TabbedItemSheet)
+
+### Utility methods
 
 * [findFolder](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/findFolder)
 * [generateApplicationPosition](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/generateApplicationPosition)

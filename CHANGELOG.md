@@ -1,3 +1,8 @@
+# v0.6.0
+* Application classes
+  * [TabbedActorSheet](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/TabbedActorSheet)
+  * [TabbedItemSheet](https://github.com/revolutionarygamesco/common-foundryvtt/wiki/TabbedItemSheet)
+
 # v0.5.18
 * Add `game.items`
 * Mocks
