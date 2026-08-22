@@ -1,4 +1,4 @@
-import { type Sheet } from './sheet.ts'
+import { type Sheet } from '../sheet.ts'
 import { type SheetTab } from './tab.ts'
 
 const TAB_GROUP = 'primary'

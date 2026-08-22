@@ -2,7 +2,7 @@ import {
   TabbedSheetMixin,
   type TabbedSheet,
   type TabbedSheetStatics
-} from './tabbed.ts'
+} from './mixin.ts'
 
 type TabbedActorBaseType =
   typeof foundry.applications.sheets.ActorSheetV2

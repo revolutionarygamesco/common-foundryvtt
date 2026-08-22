@@ -1,4 +1,4 @@
-import { type Sheet } from './sheet.ts'
+import { type Sheet } from '../sheet.ts'
 
 export interface SheetTab<S extends Sheet = Sheet> {
   id: string
